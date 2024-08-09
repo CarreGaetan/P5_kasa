@@ -1,0 +1,80 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 50px;
+  padding: 40px 40px 40px 60px;
+  margin: 40px 0 0 0;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+}
+
+.appartment {
+  position: relative;
+  width: 30%;
+  height: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transform: scale(1.05); /* Agrandir légèrement au survol */
+  }
+
+  .appartment_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Essayez 'contain' si vous voulez voir toute l'image sans recadrage */
+    z-index: 1;
+  }
+
+  .appartment_title {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    width: 45%;
+    text-align: left;
+    border-radius: 0 20px 0px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+  }
+}
+
+@media (min-width: 675px) and (max-width: 1024px) {
+  .appartment {
+    height: 200px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 675px) {
+  .grid {
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  .appartment {
+    width: 100%;
+    height: 255px;
+  }
+}
+
+@media (min-width: 675px) and (max-width: 1200px) {
+  .grid {
+    gap: 20px;
+  }
+}

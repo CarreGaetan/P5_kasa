@@ -1,0 +1,46 @@
+.errorImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 120px 0 0 0;
+    gap: 120px;
+
+    img {
+        width: 600px;
+    }
+
+    p {
+        font-family: Montserrat;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 51.34px;
+        text-align: left;
+        color: #FF6060;
+    }
+
+    a {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+        text-align: left;
+        color: #000000;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 675px) {
+    .errorImg img {
+        height: auto;
+        width: 200px;
+    }
+    .errorImg p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .errorImg a {
+        font-size: 14px;
+    }
+}

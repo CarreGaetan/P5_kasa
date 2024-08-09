@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 20px 20px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+
+  & p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34.22px
+  }
+  }
+  
+  .logo_footer {
+    height: auto;
+    width: 122px;
+  }
+
+  @media (min-width: 320px) and (max-width: 675px) {
+    .footer p {
+      text-align: center;
+      font-size: 12px;
+      line-height: 17.11px;
+      padding: 0 110px;
+    }
+  }
+    

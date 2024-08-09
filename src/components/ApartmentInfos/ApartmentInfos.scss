@@ -1,0 +1,126 @@
+.apt_infos {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 1240px;
+    gap: 20px;
+
+    & h1 {
+        padding: 0;
+        margin: 0;
+        color: #FF6060;
+        font-weight: 500;
+        font-size: 36px;
+    }
+    & p {
+        padding: 0;
+        margin: 0;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.apt_title_categories {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.apt_host_rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+    width: 100%;
+}
+
+.apt_title {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.apt_host {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    & img {
+        width: 25%;
+        border-radius: 50%;
+    }
+    & p {
+        width: 45%;
+        text-align: right;
+        padding: 10px;
+        font-size: 18px;
+        color: #FF6060;
+        font-weight: 500;
+    }
+}
+
+.apt_categories {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    & p {
+        background-color: #FF6060;
+        padding: 5px 30px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 700;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
+
+.apt_rating {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    & img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 675px) {
+    .apt_host_rating {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .apt_host {
+        order: 2;
+
+        & p {
+            font-size: 12px;
+            width: 30%;
+        }
+    }
+    .apt_rating {
+        order: 1;
+    }
+    .apt_infos {
+        flex-direction: column;
+        & h1 {
+            font-size: 18px;
+        }
+        & p {
+            font-size: 14px;
+        }
+    }
+    .apt_categories {
+        flex-wrap: wrap;
+
+        & p {
+            font-size: 10px;
+        }
+    }
+    
+}
