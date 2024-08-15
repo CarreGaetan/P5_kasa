@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import data from "../../datas/data";
 import Carousel from "../../components/Carousel/Carousel";
@@ -10,9 +11,14 @@ function ApartmentDetails() {
     const navigate = useNavigate();
     const apartment = data.find((item) => item.id === id);
 
+    useEffect(() => {
+        if (!apartment) {
+            navigate('/404');
+        }
+    }, [apartment, navigate]);
+
     if (!apartment) {
-        navigate('/404'); 
-        return null; 
+        return null;
     }
 
     return (
