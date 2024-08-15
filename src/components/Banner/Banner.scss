@@ -8,7 +8,7 @@
   background-position: center;
   border-radius: 25px;
   width: 100%;
-  overflow: hidden; /* Pour s'assurer que l'ombre reste dans les limites de la bannière */
+  overflow: hidden;
 }
 
 .banner::before {
@@ -18,14 +18,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Couche sombre sur l'image */
+  background-color: rgba(0, 0, 0, 0.4); 
   border-radius: 25px;
-  z-index: 1; /* Positionne l'ombre en dessous du texte */
+  z-index: 1;
 }
 
 .banner_text {
   position: relative;
-  z-index: 2; /* Positionne le texte au-dessus de l'ombre */
+  z-index: 2;
   font-family: Montserrat;
   font-size: 48px;
   font-weight: 700;

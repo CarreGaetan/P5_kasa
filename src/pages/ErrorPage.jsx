@@ -1,5 +1,5 @@
  // import React from 'react'
-import Header from "../components/Navbar/Navbar"
+import Header from "../components/Header/Header"
 import ErrorImg from "../assets/ErrorImg.png" 
 import "../styles/ErrorPage.scss"
 import { Link } from "react-router-dom";

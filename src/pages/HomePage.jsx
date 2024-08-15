@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar/Navbar";
+import Header from "../components/Header/Header"
 import Banner from "../components/Banner/Banner";
 import AppartmentGrid from "../components/ApartmentCards/ApartmentCards";
 import Footer from "../components/Footer/Footer";
@@ -10,7 +10,7 @@ function App() {
     <>
       <div className="wrapper">
           <div className="main">
-            <Navbar />
+            <Header />
             <Banner image={bannerImage} text="Chez vous, partout et ailleurs" />
             <AppartmentGrid />
           </div>

@@ -1,9 +1,9 @@
 // import React from 'react'
-import "./Navbar.scss";
+import "./Header.scss";
 import logo from '../../assets/logo.png';
 import { NavLink } from 'react-router-dom';
 
-function Navbar() {
+function Header() {
   return (
     <nav className="navbar">
         <div className="navbar_logo">
@@ -21,4 +21,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Header

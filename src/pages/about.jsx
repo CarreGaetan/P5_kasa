@@ -1,5 +1,5 @@
 // import React from 'react'
-import Navbar from "../components/Navbar/Navbar"
+import Header from "../components/Header/Header"
 import Banner from "../components/Banner/Banner"
 import Dropwdown from "../components/Dropdown/dropdown"
 import Footer from "../components/Footer/Footer"
@@ -11,7 +11,7 @@ function about() {
     <>
       <div className="wrapper">
           <div className="main">
-            <Navbar />
+            <Header />
             <Banner image={bannerImgAbout} />
             <div className="dropdowns_container">
               <Dropwdown title="Fiabilité">

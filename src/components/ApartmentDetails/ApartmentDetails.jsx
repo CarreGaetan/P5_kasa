@@ -1,36 +1,24 @@
-import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import data from "../../datas/data";
 import Carousel from "../../components/Carousel/Carousel";
-import Dropdown from "../../components/Dropdown/dropdown";
-import ApartmentInfo from "../../components/ApartmentInfos/ApartmentInfos";
+import Dropdown from "../Dropdown/dropdown";
+import ApartmentInfos from "../../components/ApartmentInfos/ApartmentInfos";
 import "./ApartmentDetails.scss";
 
 function ApartmentDetails() {
     const { id } = useParams();
+    const navigate = useNavigate();
     const apartment = data.find((item) => item.id === id);
 
-    const [isDescriptionOpen, setDescriptionOpen] = useState(false);
-    const [isEquipementOpen, setEquipementOpen] = useState(false);
-
-    const toggleDescription = () => {
-        setDescriptionOpen(!isDescriptionOpen);
-    };
-
-    const toggleEquipement = () => {
-        setEquipementOpen(!isEquipementOpen);
-    };
-
     if (!apartment) {
-        return <div>Appartement non trouvé</div>;  // useNavigate = redirection vers 404
+        navigate('/404'); 
+        return null; 
     }
-
-  
 
     return (
         <div className="apt_main">
             <Carousel pictures={apartment.pictures} title={apartment.title} />
-            <ApartmentInfo 
+            <ApartmentInfos 
                 title={apartment.title} 
                 location={apartment.location} 
                 host={apartment.host} 
@@ -38,10 +26,10 @@ function ApartmentDetails() {
                 rating={apartment.rating} 
             />
             <div className="apt_dropdown">
-                <Dropdown title="Description" isOpen={isDescriptionOpen} toggle={toggleDescription}>
+                <Dropdown title="Description">
                     <p>{apartment.description}</p>
                 </Dropdown>
-                <Dropdown title="Equipements" isOpen={isEquipementOpen} toggle={toggleEquipement}>
+                <Dropdown title="Equipements">
                     <ul>
                         {apartment.equipments.map((item, index) => (
                             <li key={index}>{item}</li>

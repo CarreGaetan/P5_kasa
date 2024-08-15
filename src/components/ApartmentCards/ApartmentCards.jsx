@@ -3,7 +3,7 @@ import "./ApartmentCards.scss";
 import data from "../../datas/data"; // Assurez-vous que le chemin est correct
 import { Link } from "react-router-dom";
 
-function AppartmentGrid() {
+function AppartmentCards() {
   return (
     <div className="grid">
       {data.map((appartment) => (
@@ -16,4 +16,4 @@ function AppartmentGrid() {
   );
 }
 
-export default AppartmentGrid;
+export default AppartmentCards;

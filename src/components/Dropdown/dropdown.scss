@@ -40,7 +40,7 @@
   }
 
   .dropdown-content.open {
-    max-height: 500px; /* Une hauteur arbitraire qui est plus grande que le contenu possible */
+    max-height: 500px; 
     opacity: 1;
   }
 
@@ -52,6 +52,7 @@
 
   li {
     padding: 5px 0;
+    font-size: 18px;
   }
 
   p {
