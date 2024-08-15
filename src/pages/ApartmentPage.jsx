@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import data from "../../datas/data";
-import Carousel from "../../components/Carousel/Carousel";
-import Dropdown from "../Dropdown/dropdown";
-import ApartmentInfos from "../../components/ApartmentInfos/ApartmentInfos";
-import "./ApartmentDetails.scss";
+import data from "../datas/data";
+import Carousel from "../components/Carousel/Carousel";
+import Dropdown from "../components/Dropdown/dropdown";
+import ApartmentInfos from "../components/ApartmentInfos/ApartmentInfos";
+import Header from "../components/Header/Header"
+import Footer from "../components/Footer/Footer"
+import "../styles/ApartmentPage.scss"
 
 function ApartmentDetails() {
     const { id } = useParams();
@@ -22,7 +24,9 @@ function ApartmentDetails() {
     }
 
     return (
-        <div className="apt_main">
+      <div className="wrapper">
+        <div className="main">
+          <Header />
             <Carousel pictures={apartment.pictures} title={apartment.title} />
             <ApartmentInfos 
                 title={apartment.title} 
@@ -43,7 +47,9 @@ function ApartmentDetails() {
                     </ul>
                 </Dropdown>
             </div>
-        </div>
+          </div>
+        <Footer />
+      </div>
     );
 }
 

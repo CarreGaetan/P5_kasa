@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage.jsx'
 import './styles/index.scss'
 import {createBrowserRouter, RouterProvider } from "react-router-dom"
 import About from "./pages/about.jsx"
-import AppartmentPage from "./pages/AppartmentPage.jsx"
+import ApartmentPage from "./pages/ApartmentPage.jsx"
 import ErrorPage from "./pages/ErrorPage.jsx"
 
 const router = createBrowserRouter([
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "/Appartment/:id",
-    element: <AppartmentPage />
+    path: "/Apartment/:id",
+    element: <ApartmentPage />
   },
   {
     path: "/about",
