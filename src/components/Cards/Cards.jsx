@@ -1,9 +1,9 @@
 // import React from 'react'
 import "./Cards.scss";
-import data from "../../datas/data"; // Assurez-vous que le chemin est correct
+import data from "../../datas/data";
 import { Link } from "react-router-dom";
 
-function AppartmentCards() {
+function Cards() {
   return (
     <div className="grid">
       {data.map((appartment) => (
@@ -16,4 +16,4 @@ function AppartmentCards() {
   );
 }
 
-export default AppartmentCards;
+export default Cards;
